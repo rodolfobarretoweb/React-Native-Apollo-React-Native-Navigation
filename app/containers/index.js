@@ -12,14 +12,6 @@ const containers = {
   OffersDetails
 };
 
-export function registerContainers() {
-  Object.keys(containers).forEach(key => {
-    Navigation.registerComponent(
-      getContainer(key), () => containers[key], client.store, ApolloProvider, { client }
-    );
-  });
-}
-
 export function getContainer(name) {
   if(!Object.keys(containers).includes(name)) {
     throw new Error(
@@ -29,4 +21,12 @@ export function getContainer(name) {
   }
 
   return `${NAMESPACE}.${name}`;
+}
+
+export function registerContainers() {
+  Object.keys(containers).forEach(key => {
+    Navigation.registerComponent(
+      getContainer(key), () => containers[key], client.store, ApolloProvider, { client }
+    );
+  });
 }
