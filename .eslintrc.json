@@ -8,7 +8,7 @@
   },
   "parser": "babel-eslint",
   "extends": "airbnb",
-  "plugins": ["jest", "detox"],
+  "plugins": ["jest"],
   "rules": {
     "arrow-parens": ["error", "as-needed"],
     "function-paren-newline": [0],
