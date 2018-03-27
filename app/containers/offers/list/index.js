@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import { graphql } from 'react-apollo';
+import query from './query';
 
 class List extends PureComponent {
   render() {
@@ -6,4 +8,4 @@ class List extends PureComponent {
   }
 }
 
-export default List;
+export default graphql(query)(List);

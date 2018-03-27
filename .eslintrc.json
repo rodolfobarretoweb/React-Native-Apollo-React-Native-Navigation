@@ -4,8 +4,7 @@
     "node": true,
     "browser": true,
     "es6": true,
-    "jest/globals": true,
-    "detox/detox": true
+    "jest/globals": true
   },
   "parser": "babel-eslint",
   "extends": "airbnb",
