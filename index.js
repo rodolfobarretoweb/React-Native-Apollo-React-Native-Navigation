@@ -1,4 +1,11 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { Navigation } from 'react-native-navigation';
+import { registerContainers } from './app/containers';
+import { NAMESPACE } from './app/configs/constants';
 
-AppRegistry.registerComponent('NuContaMarketPlace', () => App);
+registerContainers();
+
+Navigation.startSingleScreenApp({
+  screen: {
+    screen: `${NAMESPACE}.OffersList`
+  }
+});
