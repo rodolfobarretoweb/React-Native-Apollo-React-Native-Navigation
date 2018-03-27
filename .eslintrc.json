@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": ["jest", "detox"],
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "function-paren-newline": [0],
+    "comma-dangle": ["error", "never"],
+    "keyword-spacing": [0],
+    "space-before-function-paren": [0],
+    "import/no-extraneous-dependencies": {
+      "moduleDirectories": ["../"]
+    },
+    "import/prefer-default-export": [0],
+    "import/no-unresolved": [0],
+    "import/extensions": [0],
+    "react/sort-comp": [0],
+    "react/prefer-stateless-function": [1, { "ignorePureComponents": true }],
+    "react/require-default-props": [0, { "forbidDefaultForRequired": true}],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "no-restricted-properties": [
+      0,
+      {
+        "object": "Math",
+        "property": "pow"
+      }
+    ]
+  }
+}
