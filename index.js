@@ -1,11 +1,10 @@
 import { Navigation } from 'react-native-navigation';
-import { registerContainers } from './app/containers';
-import { NAMESPACE } from './app/configs/constants';
+import { registerContainers, getContainer } from './app/containers';
 
 registerContainers();
 
 Navigation.startSingleScreenApp({
   screen: {
-    screen: `${NAMESPACE}.OffersList`
+    screen: getContainer('OffersList')
   }
 });
