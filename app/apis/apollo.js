@@ -8,7 +8,7 @@ import { END_POINT, TOKEN } from '../configs/env';
 const httpLink = createHttpLink({ uri: END_POINT });
 
 const middlewareLink = new ApolloLink((operation, forward) => {
-  operation.setContext({ headers: {  authorization: `Bearer ${TOKEN}` } });
+  operation.setContext({ headers: { authorization: `Bearer ${TOKEN}` } });
   return forward(operation);
 });
 

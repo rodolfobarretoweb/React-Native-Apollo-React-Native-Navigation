@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "start": "yarn lint && node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint": "eslint --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty app *.js"
   },
   "dependencies": {
     "@remobile/react-native-toast": "1.0.7",
