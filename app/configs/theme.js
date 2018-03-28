@@ -11,5 +11,5 @@ export const NAVIGATION_DEFAULT_THEME = {
   navBarNoBorder: true,
   navBarTitleTextCentered: true,
   navBarTextFontFamily: DEFAULT_FONT_FAMILY,
-  screenBackgroundColor: '#f5f5f5'
+  screenBackgroundColor: '#d8d8d8'
 };

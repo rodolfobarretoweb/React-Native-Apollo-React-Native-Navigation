@@ -1,11 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { TouchableHighlight } from 'react-native';
+import Style from './style';
 
 class Card extends PureComponent {
   render() {
-    return(
-      <View>{ this.props.children }</View>
+    const { children, ...otherProps } = this.props;
+
+    return (
+      <TouchableHighlight underlayColor="transparent" style={Style.container} {...otherProps}>
+        { this.props.children }
+      </TouchableHighlight>
     );
   }
 }

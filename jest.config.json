@@ -1,0 +1,21 @@
+{
+  "preset": "react-native",
+  "verbose": true,
+  "globals": {
+    "__DEV__": true,
+    "NODE_ENV": "test"
+  },
+  "testPathIgnorePatterns": [
+    "/utils/",
+    "/node_modules/"
+  ],
+  "snapshotSerializers": [
+    "./node_modules/jest-serializer-enzyme"
+  ],
+  "collectCoverage": true,
+  "coveragePathIgnorePatterns": [
+    "constants*",
+    "/langs/",
+    "style.js"
+  ]
+}

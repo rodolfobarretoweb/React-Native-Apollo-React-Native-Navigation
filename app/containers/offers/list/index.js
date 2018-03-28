@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, View, Image, Text } from 'react-native';
+import { View, FlatList, Text } from 'react-native';
 import I18n from 'react-native-i18n';
 import { graphql } from 'react-apollo';
-import Card from 'app/components/card';
-import ShoppingBagImage from 'app/assets/images/offers/shopping-bag.png';
+import NoResults from 'app/components/noResults';
+import Load from 'app/components/load';
 import query from './query';
+import Item from './item';
 import Style from './style';
 
 class List extends PureComponent {
@@ -12,18 +13,33 @@ class List extends PureComponent {
     this.props.navigator.setTitle({ title: I18n.t('offers.list.title') });
   }
 
+  item = ({ item }) => (
+    <Item {...item} navigator={this.props.navigator} />
+  );
+
+  keyExtractor = item => (item.id);
+
   render() {
     return (
-      <ScrollView>
+      <View style={Style.container}>
         <View style={Style.headerContainer}>
-          <Image source={ShoppingBagImage} style={Style.backgroundContainer} />
           <Text style={Style.headerLabel}>{ I18n.t('offers.list.warning') }</Text>
         </View>
 
-        <View style={Style.contentContainer}>
-
-        </View>
-      </ScrollView>
+        {
+          this.props.data.loading ?
+            <View style={Style.loadContainer}><Load /></View>
+          :
+            <FlatList
+              contentContainerStyle={Style.contentContainer}
+              data={this.props.data.viewer.offers}
+              keyExtractor={this.keyExtractor}
+              initialNumToRender={20}
+              renderItem={this.item}
+              ListEmptyComponent={<NoResults text={I18n.t('offers.list.noResults')} />}
+            />
+        }
+      </View>
     );
   }
 }

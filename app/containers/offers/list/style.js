@@ -1,11 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  container: {
+    flex: 1
+  },
+
   headerContainer: {
     backgroundColor: '#782698',
     paddingVertical: 30,
-    paddingHorizontal: 20,
-    justifyContent: 'flex-end'
+    paddingHorizontal: 20
   },
 
   headerLabel: {
@@ -15,13 +18,13 @@ export default StyleSheet.create({
     backgroundColor: 'transparent'
   },
 
-  backgroundContainer: {
-    position: 'absolute',
-    right: 0,
-    top: 0
-  },
-
   contentContainer: {
     padding: 10
+  },
+
+  loadContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
