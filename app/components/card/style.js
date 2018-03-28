@@ -8,6 +8,6 @@ export default StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 1, height: 0.1 },
     shadowOpacity: 0.3,
-    elevation: 5
+    elevation: 3
   }
 });
