@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1522203212466" clover="3.2.0">
-  <project timestamp="1522203212466" name="All files">
-    <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="15" coveredelements="15" complexity="0" loc="10" ncloc="10" packages="3" files="3" classes="3">
-      <package name="card">
+<coverage generated="1522281048094" clover="3.2.0">
+  <project timestamp="1522281048094" name="All files">
+    <metrics statements="19" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="10" coveredmethods="5" elements="33" coveredelements="21" complexity="0" loc="19" ncloc="19" packages="6" files="7" classes="7">
+      <package name="components.card">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/components/card/index.js">
           <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="18" count="1" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="10" count="3" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="load">
+      <package name="components.load">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/components/load/index.js">
           <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
           <line num="8" count="3" type="stmt"/>
           <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
           <line num="12" count="2" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="noResults">
+      <package name="components.noResults">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/components/noResults/index.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="8" count="1" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="containers.offers.details">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="index.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/containers/offers/details/index.js">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="5" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="containers.offers.list">
+        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <file name="index.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/containers/offers/list/index.js">
+          <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+        </file>
+        <file name="query.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/containers/offers/list/query.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="containers.offers.list.item">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="index.js" path="/Users/rodolfobarretoweb/Projects/NuContaMarketPlace/app/containers/offers/list/item/index.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>

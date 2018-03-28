@@ -33,6 +33,7 @@ class Item extends PureComponent {
 }
 
 Item.propTypes = {
+  navigator: PropTypes.instanceOf(Object).isRequired,
   id: PropTypes.string.isRequired, //eslint-disable-line
   price: PropTypes.number.isRequired,
   product: PropTypes.shape({

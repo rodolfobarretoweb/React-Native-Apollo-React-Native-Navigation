@@ -8,7 +8,7 @@ import query from './query';
 import Item from './item';
 import Style from './style';
 
-class List extends PureComponent {
+export class List extends PureComponent {
   componentWillMount() {
     this.props.navigator.setTitle({ title: I18n.t('offers.list.title') });
   }

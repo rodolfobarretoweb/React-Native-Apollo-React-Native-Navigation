@@ -9,6 +9,9 @@
     "/utils/",
     "/node_modules/"
   ],
+  "setupFiles": [
+    "./__mocks__/index.js"
+  ],
   "snapshotSerializers": [
     "./node_modules/jest-serializer-enzyme"
   ],
@@ -16,6 +19,9 @@
   "coveragePathIgnorePatterns": [
     "constants*",
     "/langs/",
+    "/configs/",
+    "/apis/",
+    "/app/containers/index.js",
     "style.js"
   ]
 }

@@ -24,7 +24,7 @@ exports[`Load component renders snapshot correctly 1`] = `
       },
       Object {
         "backgroundColor": "#fff",
-        "elevation": 5,
+        "elevation": 3,
         "marginBottom": 10,
         "padding": 15,
         "shadowColor": "#000",
