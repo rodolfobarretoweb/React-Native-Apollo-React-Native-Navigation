@@ -4,6 +4,7 @@ import { Text, View, Image } from 'react-native';
 import truncate from 'lodash/truncate';
 import { getContainer } from 'app/containers';
 import Card from 'app/components/card';
+import { formatCurrency } from 'app/utils/currency';
 import Style from './style';
 
 class Item extends PureComponent {
@@ -24,7 +25,7 @@ class Item extends PureComponent {
         <View>
           <Image source={{ uri: image }} style={Style.image} />
           <Text style={Style.titleLabel}>{name}</Text>
-          <Text style={Style.priceLabel}>${price}</Text>
+          <Text style={Style.priceLabel}>{formatCurrency({ value: price })}</Text>
           <Text style={Style.descriptionLabel}>{truncate(description, { length: 100 })}</Text>
         </View>
       </Card>

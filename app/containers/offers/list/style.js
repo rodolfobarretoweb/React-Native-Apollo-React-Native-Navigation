@@ -12,7 +12,7 @@ export default StyleSheet.create({
   },
 
   headerLabel: {
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center',
     color: '#fff',
     backgroundColor: 'transparent'

@@ -82,8 +82,7 @@ exports[`Item component renders snapshot correctly 1`] = `
         }
       }
     >
-      $
-      10
+      $10.00
     </Text>
     <Text
       accessible={true}

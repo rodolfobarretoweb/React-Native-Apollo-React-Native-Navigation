@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/5</span>
+        <span class='fraction'>6/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/5</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/5</span>
+        <span class='fraction'>6/7</span>
       </div>
     </div>
     <p class="quiet">
@@ -97,7 +97,17 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -106,6 +116,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -124,6 +140,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,8 +172,10 @@
 import { View, FlatList, Text } from 'react-native';
 import I18n from 'react-native-i18n';
 import { graphql } from 'react-apollo';
+import get from 'lodash/get';
 import NoResults from 'app/components/noResults';
 import Load from 'app/components/load';
+import { formatCurrency } from 'app/utils/currency';
 import query from './query';
 import Item from './item';
 import Style from './style';
@@ -161,6 +183,10 @@ import Style from './style';
 export class List extends PureComponent {
   componentWillMount() {
     this.props.navigator.setTitle({ title: I18n.t('offers.list.title') });
+  }
+&nbsp;
+  static formatBalance(value) {
+    return formatCurrency({ value });
   }
 &nbsp;
   item = ({ item }) =&gt; (
@@ -174,19 +200,23 @@ export class List extends PureComponent {
   keyExtractor = item =&gt; (item.id);
 &nbsp;
   render() {
+    const data = get(this.props, 'data', {});
+&nbsp;
     return (
       &lt;View style={Style.container}&gt;
         &lt;View style={Style.headerContainer}&gt;
-          &lt;Text style={Style.headerLabel}&gt;{ I18n.t('offers.list.warning') }&lt;/Text&gt;
+          &lt;Text style={Style.headerLabel}&gt;
+            { I18n.t('offers.list.balance', { value: List.formatBalance(get(data, 'viewer.balance', 0)) }) }
+          &lt;/Text&gt;
         &lt;/View&gt;
 &nbsp;
         {
-          this.props.data.loading ?
+          data.loading ?
             &lt;View style={Style.loadContainer}&gt;&lt;Load /&gt;&lt;/View&gt;
           :
             &lt;FlatList
               contentContainerStyle={Style.contentContainer}
-              data={this.props.data.viewer.offers}
+              data={data.viewer.offers}
               keyExtractor={this.keyExtractor}
               initialNumToRender={20}
               renderItem={this.item}
@@ -205,7 +235,7 @@ export default graphql(query)(List);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 28 2018 21:20:52 GMT-0300 (-03)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 28 2018 22:12:32 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

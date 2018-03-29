@@ -25,7 +25,7 @@ exports[`List container renders snapshot correctly 1`] = `
         Object {
           "backgroundColor": "transparent",
           "color": "#fff",
-          "fontSize": 25,
+          "fontSize": 20,
           "textAlign": "center",
         }
       }
@@ -159,8 +159,7 @@ exports[`List container renders snapshot correctly 1`] = `
                 }
               }
             >
-              $
-              10
+              $10.00
             </Text>
             <Text
               accessible={true}
@@ -208,7 +207,7 @@ exports[`List container renders snapshot correctly when is loading 1`] = `
         Object {
           "backgroundColor": "transparent",
           "color": "#fff",
-          "fontSize": 25,
+          "fontSize": 20,
           "textAlign": "center",
         }
       }
