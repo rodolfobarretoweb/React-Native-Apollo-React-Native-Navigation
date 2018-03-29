@@ -1,6 +1,7 @@
 import I18n from 'react-native-i18n';
 import { Navigation } from 'react-native-navigation';
 import { registerContainers, getContainer } from './app/containers';
+import { NAVIGATION_DEFAULT_THEME } from './app/configs/theme';
 import langs from './app/langs';
 
 registerContainers();
@@ -11,5 +12,8 @@ I18n.translations = langs;
 I18n.defaultLocale = 'en';
 
 Navigation.startSingleScreenApp({
-  screen: { screen: getContainer('OffersList') }
+  screen: {
+    screen: getContainer('OffersList'),
+    navigatorStyle: NAVIGATION_DEFAULT_THEME
+  }
 });
