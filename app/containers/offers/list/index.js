@@ -17,6 +17,10 @@ export class List extends PureComponent {
     <Item {...item} navigator={this.props.navigator} />
   );
 
+  renderNoResults = () => (
+    <NoResults text={I18n.t('offers.list.noResults')} />
+  )
+
   keyExtractor = item => (item.id);
 
   render() {
@@ -36,7 +40,7 @@ export class List extends PureComponent {
               keyExtractor={this.keyExtractor}
               initialNumToRender={20}
               renderItem={this.item}
-              ListEmptyComponent={<NoResults text={I18n.t('offers.list.noResults')} />}
+              ListEmptyComponent={this.renderNoResults}
             />
         }
       </View>
