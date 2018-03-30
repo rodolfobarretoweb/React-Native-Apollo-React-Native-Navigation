@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-native-test-utils';
-import checkPropTypes, { assertPropTypes } from 'check-prop-types';
+import checkPropTypes from 'check-prop-types';
 import NoResults from '../index';
 
 describe('NoResults component', () => {
