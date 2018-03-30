@@ -9,6 +9,7 @@ export default {
     title: 'Offer details',
     purchase: 'Purchase',
     currentBalance: 'Your balance {{value}}',
-    noCredit: 'Unfortunately you do not have credits to make this purchase'
+    successMessage: 'Your purchase was successful!',
+    errorMessage: 'Ops, something is wrong: {{reason}}'
   }
 };

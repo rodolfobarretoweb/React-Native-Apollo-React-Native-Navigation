@@ -2,32 +2,43 @@ import React, { PureComponent } from 'react';
 import { TouchableHighlight, ScrollView, View, Image, Text } from 'react-native';
 import I18n from 'react-native-i18n';
 import Toast from '@remobile/react-native-toast';
+import { graphql } from 'react-apollo';
+import has from 'lodash/has';
 import { formatCurrency } from 'app/utils/currency';
-import { setValue as setCurrentBalance, getValue as getCurrentBalance } from '../utils/balance';
+import query from './query';
 import Style from './style';
 
 class Details extends PureComponent {
-  state = { currentBalance: 0 };
+  state = { balance: 0 };
 
   async componentWillMount() {
     this.props.navigator.setTitle({ title: I18n.t('offers.details.title') });
 
-    const currentBalance = await getCurrentBalance();
-    this.setState({ currentBalance });
+    this.setState({ balance: this.props.balance });
   }
 
   static formatCurrency(value) {
     return formatCurrency({ value });
   }
 
-  purchase = () => {
-    const currentBalance = parseFloat(this.state.currentBalance) - this.props.price;
+  purchase = async () => {
+    try {
+      const response = await this.props.mutate({ variables: { offerId: this.props.id } });
 
-    if(currentBalance >= 0) {
-      this.setState({ currentBalance });
-      setCurrentBalance(currentBalance);
-    } else {
-      Toast.showLongCenter(I18n.t('offers.details.noCredit'));
+      if(has(response, 'data.purchase')) {
+        const { data: { purchase } } = response;
+
+        if(purchase.errorMessage) {
+          Toast.showLongCenter(I18n.t('offers.details.errorMessage', { reason: purchase.errorMessage }));
+        }
+
+        if(purchase.success === true) {
+          Toast.showLongCenter(I18n.t('offers.details.successMessage'));
+          this.setState({ balance: purchase.customer.balance });
+        }
+      }
+    } catch(error) {
+      Toast.showLongCenter(I18n.t('offers.details.errorMessage'));
     }
   }
 
@@ -61,7 +72,11 @@ class Details extends PureComponent {
 
           <View style={Style.bottomBarBalanceContainer}>
             <Text style={Style.bottomBarbalanceLabel}>
-              {I18n.t('offers.details.currentBalance', { value: Details.formatCurrency(this.state.currentBalance) })}
+              {
+                I18n.t('offers.details.currentBalance', {
+                  value: Details.formatCurrency(this.state.balance)
+                }
+              )}
             </Text>
           </View>
         </View>
@@ -70,4 +85,4 @@ class Details extends PureComponent {
   }
 }
 
-export default Details;
+export default graphql(query)(Details);
