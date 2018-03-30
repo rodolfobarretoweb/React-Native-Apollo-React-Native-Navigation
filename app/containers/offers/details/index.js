@@ -8,7 +8,7 @@ import { formatCurrency } from 'app/utils/currency';
 import query from './query';
 import Style from './style';
 
-class Details extends PureComponent {
+export class Details extends PureComponent {
   state = { balance: 0 };
 
   async componentWillMount() {

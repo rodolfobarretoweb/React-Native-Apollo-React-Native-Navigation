@@ -9,12 +9,6 @@ describe('NoResults component', () => {
     expect(noResults.toJSON()).toMatchSnapshot();
   });
 
-  it('fails without text prop', () => {
-    expect(() => {
-      assertPropTypes(NoResults.propTypes, { text: undefined }, 'prop');
-    }).toThrow();
-  });
-
   it('fails with wrong prop type on `text` prop', () => {
     expect(
       checkPropTypes(NoResults.propTypes, { text: false }, 'prop', 'NoResults')
