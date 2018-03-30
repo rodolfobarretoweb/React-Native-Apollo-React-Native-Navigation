@@ -5,9 +5,8 @@ import { Details } from '../index';
 
 describe('Details container', () => {
   const props = {
-    navigator: {
-      setTitle: jest.fn()
-    },
+    navigator: { setTitle: jest.fn() },
+    mutate: jest.fn(),
 
     balance: 1000,
     id: 'id',
@@ -35,8 +34,9 @@ describe('Details container', () => {
       return render;
     };
 
-    it('redirect with push method', () => {
-      expect(simulate()).toMatchSnapshot();
+    it('call mutate method', () => {
+      simulate();
+      expect(props.mutate).toHaveBeenCalled();
     });
   });
 });
