@@ -11,7 +11,7 @@ class Item extends PureComponent {
   onPress = () => {
     this.props.navigator.push({
       screen: getContainer('OffersDetails'),
-      passProps: this.props
+      passProps: { ...this.props }
     });
   };
 
@@ -35,7 +35,8 @@ class Item extends PureComponent {
 
 Item.propTypes = {
   navigator: PropTypes.instanceOf(Object).isRequired,
-  id: PropTypes.string.isRequired, //eslint-disable-line
+  id: PropTypes.string.isRequired, // eslint-disable-line
+  balance: PropTypes.number.isRequired, // eslint-disable-line
   price: PropTypes.number.isRequired,
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,

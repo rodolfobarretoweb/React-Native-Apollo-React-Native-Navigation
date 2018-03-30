@@ -11,7 +11,7 @@ import Item from './item';
 import Style from './style';
 
 export class List extends PureComponent {
-  componentWillMount() {
+  async componentWillMount() {
     this.props.navigator.setTitle({ title: I18n.t('offers.list.title') });
   }
 
@@ -19,15 +19,14 @@ export class List extends PureComponent {
     return formatCurrency({ value });
   }
 
-  item = ({ item }) => (
-    <Item {...item} navigator={this.props.navigator} />
-  );
+  item = ({ item }) => {
+    const { navigator, data: { viewer: { balance } } } = this.props;
+    return <Item {...item} balance={balance} navigator={navigator} />;
+  };
 
-  renderNoResults = () => (
-    <NoResults text={I18n.t('offers.list.noResults')} />
-  )
+  renderNoResults = () => <NoResults text={I18n.t('offers.list.noResults')} />
 
-  keyExtractor = item => (item.id);
+  keyExtractor = item => item.id;
 
   render() {
     const data = get(this.props, 'data', {});
@@ -36,7 +35,11 @@ export class List extends PureComponent {
       <View style={Style.container}>
         <View style={Style.headerContainer}>
           <Text style={Style.headerLabel}>
-            { I18n.t('offers.list.balance', { value: List.formatBalance(get(data, 'viewer.balance', 0)) }) }
+            {
+              I18n.t('offers.list.balance', {
+                value: List.formatBalance(get(data, 'viewer.balance', 0))
+              }
+            )}
           </Text>
         </View>
 

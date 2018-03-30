@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
+import I18n from 'react-native-i18n';
 import Style from './style';
 
 class NoResults extends PureComponent {
@@ -13,8 +14,12 @@ class NoResults extends PureComponent {
   }
 }
 
+NoResults.defaultProps = {
+  text: I18n.t('shared.noResults')
+};
+
 NoResults.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string
 };
 
 export default NoResults;

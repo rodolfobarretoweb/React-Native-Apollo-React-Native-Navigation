@@ -9,6 +9,7 @@ describe('Item component', () => {
     navigator: {},
     id: 'id',
     price: 10,
+    balance: 1000,
     product: {
       name: 'Product name',
       description: 'Description',
@@ -30,6 +31,12 @@ describe('Item component', () => {
   it('fails without id prop', () => {
     expect(() => {
       assertPropTypes(Item.propTypes, { id: undefined }, 'prop');
+    }).toThrow();
+  });
+
+  it('fails without balance prop', () => {
+    expect(() => {
+      assertPropTypes(Item.propTypes, { balance: undefined }, 'prop');
     }).toThrow();
   });
 
@@ -61,6 +68,12 @@ describe('Item component', () => {
     expect(
       checkPropTypes(Item.propTypes, { ...defaultProps, navigator: '' }, 'prop', 'Item')
     ).toContain('Invalid prop `navigator` of type `String` supplied to `Item`, expected instance of `Object`.');
+  });
+
+  it('fails with wrong prop type on `balance` prop', () => {
+    expect(
+      checkPropTypes(Item.propTypes, { ...defaultProps, balance: false }, 'prop', 'Item')
+    ).toContain('Invalid prop `balance` of type `boolean` supplied to `Item`, expected `number`.');
   });
 
   it('fails with wrong prop type on `id` prop', () => {

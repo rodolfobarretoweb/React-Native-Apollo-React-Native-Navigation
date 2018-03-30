@@ -15,5 +15,9 @@ Navigation.startSingleScreenApp({
   screen: {
     screen: getContainer('OffersList'),
     navigatorStyle: NAVIGATION_DEFAULT_THEME
+  },
+
+  appStyle: {
+    hideBackButtonTitle: true
   }
 });
