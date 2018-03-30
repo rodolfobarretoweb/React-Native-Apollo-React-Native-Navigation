@@ -33,8 +33,8 @@ export class Details extends PureComponent {
         }
 
         if(purchase.success === true) {
-          Toast.showLongCenter(I18n.t('offers.details.successMessage'));
           this.setState({ balance: purchase.customer.balance });
+          Toast.showLongCenter(I18n.t('offers.details.successMessage'));
         }
       }
     } catch(error) {
