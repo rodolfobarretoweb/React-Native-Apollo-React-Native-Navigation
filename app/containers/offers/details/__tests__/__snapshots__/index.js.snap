@@ -32,6 +32,7 @@ exports[`Details container renders snapshot correctly 1`] = `
           Object {
             "color": "#333",
             "fontSize": 25,
+            "fontWeight": "bold",
             "paddingLeft": 10,
             "paddingTop": 10,
           }
@@ -46,7 +47,7 @@ exports[`Details container renders snapshot correctly 1`] = `
         style={
           Object {
             "color": "#782698",
-            "fontSize": 20,
+            "fontSize": 16,
             "fontWeight": "bold",
             "paddingLeft": 10,
           }
@@ -69,7 +70,7 @@ exports[`Details container renders snapshot correctly 1`] = `
         style={
           Object {
             "color": "#333",
-            "fontSize": 16,
+            "fontSize": 14,
           }
         }
       >
@@ -79,81 +80,41 @@ exports[`Details container renders snapshot correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#fff",
-          "bottom": 0,
-          "elevation": 3,
           "flex": 1,
-          "flexDirection": "row",
-          "left": 0,
           "padding": 10,
-          "position": "absolute",
-          "right": 0,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.1,
-            "width": 1,
-          },
-          "shadowOpacity": 0.3,
         }
       }
     >
       <View
-        style={undefined}
-      >
-        <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
-          accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
-          isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-              },
-              Object {
-                "backgroundColor": "#782698",
-                "borderRadius": 10,
-                "paddingHorizontal": 10,
-                "paddingVertical": 8,
-              },
-            ]
-          }
-          testID={undefined}
-          tvParallaxProperties={undefined}
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#fff",
-                "fontSize": 16,
-                "fontWeight": "bold",
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Object {
-            "flex": 1,
-            "marginLeft": 10,
-          }
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "#782698",
+              "borderRadius": 5,
+              "paddingVertical": 10,
+            },
+          ]
         }
+        testID={undefined}
+        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -161,14 +122,26 @@ exports[`Details container renders snapshot correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#333",
+              "color": "#fff",
               "fontSize": 16,
-              "fontWeight": "bold",
-              "textAlign": "right",
+              "textAlign": "center",
             }
           }
         />
       </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
     </View>
   </View>
 </RCTScrollView>
@@ -206,6 +179,7 @@ exports[`Details container when i make a purchase get an error message 1`] = `
           Object {
             "color": "#333",
             "fontSize": 25,
+            "fontWeight": "bold",
             "paddingLeft": 10,
             "paddingTop": 10,
           }
@@ -220,7 +194,7 @@ exports[`Details container when i make a purchase get an error message 1`] = `
         style={
           Object {
             "color": "#782698",
-            "fontSize": 20,
+            "fontSize": 16,
             "fontWeight": "bold",
             "paddingLeft": 10,
           }
@@ -243,7 +217,7 @@ exports[`Details container when i make a purchase get an error message 1`] = `
         style={
           Object {
             "color": "#333",
-            "fontSize": 16,
+            "fontSize": 14,
           }
         }
       >
@@ -253,60 +227,22 @@ exports[`Details container when i make a purchase get an error message 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#fff",
-          "bottom": 0,
-          "elevation": 3,
           "flex": 1,
-          "flexDirection": "row",
-          "left": 0,
           "padding": 10,
-          "position": "absolute",
-          "right": 0,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.1,
-            "width": 1,
-          },
-          "shadowOpacity": 0.3,
         }
       }
     >
-      <View>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          onPress={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#782698",
-              "borderRadius": 10,
-              "paddingHorizontal": 10,
-              "paddingVertical": 8,
-            }
-          }
-          underlayColor="transparent"
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#fff",
-                "fontSize": 16,
-                "fontWeight": "bold",
-              }
-            }
-          />
-        </TouchableHighlight>
-      </View>
-      <View
+      <TouchableHighlight
+        activeOpacity={0.85}
+        onPress={[Function]}
         style={
           Object {
-            "flex": 1,
-            "marginLeft": 10,
+            "backgroundColor": "#782698",
+            "borderRadius": 5,
+            "paddingVertical": 10,
           }
         }
+        underlayColor="#962fbf"
       >
         <Text
           accessible={true}
@@ -314,14 +250,26 @@ exports[`Details container when i make a purchase get an error message 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#333",
+              "color": "#fff",
               "fontSize": 16,
-              "fontWeight": "bold",
-              "textAlign": "right",
+              "textAlign": "center",
             }
           }
         />
-      </View>
+      </TouchableHighlight>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
     </View>
   </View>
 </_class>
@@ -359,6 +307,7 @@ exports[`Details container when i make a purchase get success status 1`] = `
           Object {
             "color": "#333",
             "fontSize": 25,
+            "fontWeight": "bold",
             "paddingLeft": 10,
             "paddingTop": 10,
           }
@@ -373,7 +322,7 @@ exports[`Details container when i make a purchase get success status 1`] = `
         style={
           Object {
             "color": "#782698",
-            "fontSize": 20,
+            "fontSize": 16,
             "fontWeight": "bold",
             "paddingLeft": 10,
           }
@@ -396,7 +345,7 @@ exports[`Details container when i make a purchase get success status 1`] = `
         style={
           Object {
             "color": "#333",
-            "fontSize": 16,
+            "fontSize": 14,
           }
         }
       >
@@ -406,60 +355,22 @@ exports[`Details container when i make a purchase get success status 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#fff",
-          "bottom": 0,
-          "elevation": 3,
           "flex": 1,
-          "flexDirection": "row",
-          "left": 0,
           "padding": 10,
-          "position": "absolute",
-          "right": 0,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.1,
-            "width": 1,
-          },
-          "shadowOpacity": 0.3,
         }
       }
     >
-      <View>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          onPress={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#782698",
-              "borderRadius": 10,
-              "paddingHorizontal": 10,
-              "paddingVertical": 8,
-            }
-          }
-          underlayColor="transparent"
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#fff",
-                "fontSize": 16,
-                "fontWeight": "bold",
-              }
-            }
-          />
-        </TouchableHighlight>
-      </View>
-      <View
+      <TouchableHighlight
+        activeOpacity={0.85}
+        onPress={[Function]}
         style={
           Object {
-            "flex": 1,
-            "marginLeft": 10,
+            "backgroundColor": "#782698",
+            "borderRadius": 5,
+            "paddingVertical": 10,
           }
         }
+        underlayColor="#962fbf"
       >
         <Text
           accessible={true}
@@ -467,14 +378,26 @@ exports[`Details container when i make a purchase get success status 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#333",
+              "color": "#fff",
               "fontSize": 16,
-              "fontWeight": "bold",
-              "textAlign": "right",
+              "textAlign": "center",
             }
           }
         />
-      </View>
+      </TouchableHighlight>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
     </View>
   </View>
 </_class>
@@ -512,6 +435,7 @@ exports[`Details container when i make a purchase get success status 2`] = `
           Object {
             "color": "#333",
             "fontSize": 25,
+            "fontWeight": "bold",
             "paddingLeft": 10,
             "paddingTop": 10,
           }
@@ -526,7 +450,7 @@ exports[`Details container when i make a purchase get success status 2`] = `
         style={
           Object {
             "color": "#782698",
-            "fontSize": 20,
+            "fontSize": 16,
             "fontWeight": "bold",
             "paddingLeft": 10,
           }
@@ -549,7 +473,7 @@ exports[`Details container when i make a purchase get success status 2`] = `
         style={
           Object {
             "color": "#333",
-            "fontSize": 16,
+            "fontSize": 14,
           }
         }
       >
@@ -559,60 +483,22 @@ exports[`Details container when i make a purchase get success status 2`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#fff",
-          "bottom": 0,
-          "elevation": 3,
           "flex": 1,
-          "flexDirection": "row",
-          "left": 0,
           "padding": 10,
-          "position": "absolute",
-          "right": 0,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.1,
-            "width": 1,
-          },
-          "shadowOpacity": 0.3,
         }
       }
     >
-      <View>
-        <TouchableHighlight
-          activeOpacity={0.85}
-          onPress={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#782698",
-              "borderRadius": 10,
-              "paddingHorizontal": 10,
-              "paddingVertical": 8,
-            }
-          }
-          underlayColor="transparent"
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#fff",
-                "fontSize": 16,
-                "fontWeight": "bold",
-              }
-            }
-          />
-        </TouchableHighlight>
-      </View>
-      <View
+      <TouchableHighlight
+        activeOpacity={0.85}
+        onPress={[Function]}
         style={
           Object {
-            "flex": 1,
-            "marginLeft": 10,
+            "backgroundColor": "#782698",
+            "borderRadius": 5,
+            "paddingVertical": 10,
           }
         }
+        underlayColor="#962fbf"
       >
         <Text
           accessible={true}
@@ -620,14 +506,26 @@ exports[`Details container when i make a purchase get success status 2`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#333",
+              "color": "#fff",
               "fontSize": 16,
-              "fontWeight": "bold",
-              "textAlign": "right",
+              "textAlign": "center",
             }
           }
         />
-      </View>
+      </TouchableHighlight>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
     </View>
   </View>
 </_class>

@@ -7,7 +7,7 @@ export default {
 
   details: {
     title: 'Offer details',
-    purchase: 'Purchase',
+    purchase: 'PURCHASE',
     currentBalance: 'Your balance {{value}}',
     successMessage: 'Your purchase was successful!',
     errorMessage: 'Ops, something is wrong: {{reason}}'

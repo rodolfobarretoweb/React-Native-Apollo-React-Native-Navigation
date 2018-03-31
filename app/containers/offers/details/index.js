@@ -64,7 +64,7 @@ export class Details extends PureComponent {
             underlayColor="#962fbf"
           >
             <Text style={Style.buttonLabel}>
-              {I18n.t('offers.details.purchase').toUpperCase()}
+              {I18n.t('offers.details.purchase')}
             </Text>
           </TouchableHighlight>
 
