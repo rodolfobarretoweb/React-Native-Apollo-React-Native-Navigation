@@ -30,7 +30,10 @@ describe('List container', () => {
   });
 
   it('renders snapshot with no results', () => {
-    const item = renderer(<List navigator={navigator} data={{ viewer: { balance: 100, offers: [] } }} />);
+    const item = renderer(
+      <List navigator={navigator} data={{ viewer: { balance: 100, offers: [] } }} />
+    );
+
     expect(item.toJSON()).toMatchSnapshot();
   });
 
