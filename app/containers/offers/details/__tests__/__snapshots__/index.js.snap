@@ -1,0 +1,532 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details container renders snapshot correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "backgroundColor": "#fff",
+      "flexGrow": 1,
+    }
+  }
+>
+  <View>
+    <View>
+      <Image
+        source={
+          Object {
+            "uri": "image.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 300,
+            "width": "100%",
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 25,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        Product name
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#782698",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        $10.00
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+          }
+        }
+      >
+        Description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 10,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "#782698",
+              "borderRadius": 5,
+              "paddingVertical": 10,
+            },
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Details container when i make a purchase get an error message 1`] = `
+<_class
+  contentContainerStyle={
+    Object {
+      "backgroundColor": "#fff",
+      "flexGrow": 1,
+    }
+  }
+>
+  <View>
+    <View>
+      <Image
+        source={
+          Object {
+            "uri": "image.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 300,
+            "width": "100%",
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 25,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        Product name
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#782698",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        $10.00
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+          }
+        }
+      >
+        Description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 10,
+        }
+      }
+    >
+      <TouchableHighlight
+        activeOpacity={0.85}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#782698",
+            "borderRadius": 5,
+            "paddingVertical": 10,
+          }
+        }
+        underlayColor="#962fbf"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        />
+      </TouchableHighlight>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+  </View>
+</_class>
+`;
+
+exports[`Details container when i make a purchase get success status 1`] = `
+<_class
+  contentContainerStyle={
+    Object {
+      "backgroundColor": "#fff",
+      "flexGrow": 1,
+    }
+  }
+>
+  <View>
+    <View>
+      <Image
+        source={
+          Object {
+            "uri": "image.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 300,
+            "width": "100%",
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 25,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        Product name
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#782698",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        $10.00
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+          }
+        }
+      >
+        Description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 10,
+        }
+      }
+    >
+      <TouchableHighlight
+        activeOpacity={0.85}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#782698",
+            "borderRadius": 5,
+            "paddingVertical": 10,
+          }
+        }
+        underlayColor="#962fbf"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        />
+      </TouchableHighlight>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+  </View>
+</_class>
+`;
+
+exports[`Details container when i make a purchase get success status 2`] = `
+<_class
+  contentContainerStyle={
+    Object {
+      "backgroundColor": "#fff",
+      "flexGrow": 1,
+    }
+  }
+>
+  <View>
+    <View>
+      <Image
+        source={
+          Object {
+            "uri": "image.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 300,
+            "width": "100%",
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 25,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        Product name
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#782698",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        $10.00
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+          }
+        }
+      >
+        Description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 10,
+        }
+      }
+    >
+      <TouchableHighlight
+        activeOpacity={0.85}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#782698",
+            "borderRadius": 5,
+            "paddingVertical": 10,
+          }
+        }
+        underlayColor="#962fbf"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        />
+      </TouchableHighlight>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 14,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+  </View>
+</_class>
+`;

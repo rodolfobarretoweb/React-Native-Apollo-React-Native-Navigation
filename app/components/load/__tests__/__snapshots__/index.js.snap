@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Load component accepts custom style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      Object {
+        "position": "absolute",
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#782698"
+    hidesWhenStopped={true}
+    size="large"
+    style={
+      Object {
+        "borderRadius": 30,
+        "height": 60,
+        "width": 60,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Load component renders snapshot correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#782698"
+    hidesWhenStopped={true}
+    size="large"
+    style={
+      Object {
+        "borderRadius": 30,
+        "height": 60,
+        "width": 60,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Load component when \`show\` prop is false returns an empty view 1`] = `<View />`;
