@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
-#import <React/RCTBundleURLProvider.h>
 #import "RCCManager.h"
+#import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
 @implementation AppDelegate
