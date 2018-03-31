@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --config='jest.config.json'",
-    "lint": "eslint --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty app *.js"
+    "lint": "eslint --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty app *.js",
+    "android": "yarn react-native run-android",
+    "ios": "yarn react-native run-ios"
   },
   "dependencies": {
     "@remobile/react-native-toast": "1.0.7",
@@ -15,7 +17,7 @@
     "apollo-link-http": "1.5.3",
     "graphql": "0.13.2",
     "graphql-tag": "2.8.0",
-    "intl": "^1.2.5",
+    "intl": "1.2.5",
     "lodash": "4.17.5",
     "react": "16.2.0",
     "react-apollo": "2.1.0",
