@@ -57,28 +57,24 @@ export class Details extends PureComponent {
           <Text style={Style.contentDescriptionLabel}>{description}</Text>
         </View>
 
-        <View style={Style.bottomBarContainer}>
-          <View style={Style.bottomBarButtonContainer}>
-            <TouchableHighlight
-              onPress={this.purchase}
-              style={Style.bottomBarButton}
-              underlayColor="transparent"
-            >
-              <Text style={Style.bottomBarButtonLabel}>
-                {I18n.t('offers.details.purchase')}
-              </Text>
-            </TouchableHighlight>
-          </View>
-
-          <View style={Style.bottomBarBalanceContainer}>
-            <Text style={Style.bottomBarbalanceLabel}>
-              {
-                I18n.t('offers.details.currentBalance', {
-                  value: Details.formatCurrency(this.state.balance)
-                }
-              )}
+        <View style={Style.buttonContainer}>
+          <TouchableHighlight
+            onPress={this.purchase}
+            style={Style.button}
+            underlayColor="#962fbf"
+          >
+            <Text style={Style.buttonLabel}>
+              {I18n.t('offers.details.purchase').toUpperCase()}
             </Text>
-          </View>
+          </TouchableHighlight>
+
+          <Text style={Style.balanceLabel}>
+            {
+              I18n.t('offers.details.currentBalance', {
+                value: Details.formatCurrency(this.state.balance)
+              }
+            )}
+          </Text>
         </View>
       </ScrollView>
     );

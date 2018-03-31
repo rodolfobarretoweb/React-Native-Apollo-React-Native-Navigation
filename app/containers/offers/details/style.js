@@ -15,12 +15,13 @@ export default StyleSheet.create({
     paddingLeft: 10,
     paddingTop: 10,
     fontSize: 25,
-    color: '#333'
+    color: '#333',
+    fontWeight: 'bold'
   },
 
   headerPriceLabel: {
     paddingLeft: 10,
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#782698'
   },
@@ -30,48 +31,31 @@ export default StyleSheet.create({
   },
 
   contentDescriptionLabel: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#333'
   },
 
-  bottomBarContainer: {
-    padding: 10,
+  buttonContainer: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOffset: { width: 1, height: 0.1 },
-    shadowOpacity: 0.3,
-    elevation: 3
+    padding: 10
   },
 
-  bottomBarBalanceContainer: {
-    flex: 1,
-    marginLeft: 10
-  },
-
-  bottomBarButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 10,
+  button: {
     backgroundColor: '#782698',
-    borderRadius: 10
+    paddingVertical: 10,
+    borderRadius: 5
   },
 
-  bottomBarButtonLabel: {
+  buttonLabel: {
+    fontSize: 16,
     color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold'
+    textAlign: 'center'
   },
 
-  bottomBarbalanceLabel: {
-    textAlign: 'right',
+  balanceLabel: {
+    marginTop: 5,
+    fontSize: 14,
     color: '#333',
-    fontSize: 16,
-    fontWeight: 'bold'
+    textAlign: 'center'
   }
 });
