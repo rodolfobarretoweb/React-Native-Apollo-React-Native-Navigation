@@ -137,7 +137,6 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-vector-icons')
     compile project(':react-native-i18n')
     compile project(':@remobile/react-native-toast')
     compile fileTree(dir: "libs", include: ["*.jar"])

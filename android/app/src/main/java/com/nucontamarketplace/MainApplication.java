@@ -3,7 +3,6 @@ package com.nucontamarketplace;
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.controllers.ActivityCallbacks;
-import com.oblador.vectoricons.VectorIconsPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.remobile.toast.RCTToastPackage;
 
@@ -18,7 +17,6 @@ public class MainApplication extends NavigationApplication {
 
 	protected List<ReactPackage> getPackages() {
 		return Arrays.<ReactPackage>asList(
-			new VectorIconsPackage(),
 			new RNI18nPackage(),
 			new RCTToastPackage()
 		);

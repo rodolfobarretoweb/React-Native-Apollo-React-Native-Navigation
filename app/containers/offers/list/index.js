@@ -11,10 +11,6 @@ import Item from './item';
 import Style from './style';
 
 export class List extends PureComponent {
-  componentWillMount() {
-    this.props.navigator.setTitle({ title: I18n.t('offers.list.title') });
-  }
-
   static formatBalance(value) {
     return formatCurrency({ value });
   }

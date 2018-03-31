@@ -14,6 +14,7 @@ I18n.defaultLocale = 'en';
 Navigation.startSingleScreenApp({
   screen: {
     screen: getContainer('OffersList'),
+    title: I18n.t('offers.list.title'),
     navigatorStyle: NAVIGATION_DEFAULT_THEME
   },
 
