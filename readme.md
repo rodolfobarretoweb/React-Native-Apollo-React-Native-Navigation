@@ -42,6 +42,11 @@ After all set up, run the following command.
 
     yarn
 
+### Env file
+* Copy the file in: app/configs/env.example.js
+* Rename to env.js
+* Set the END_POINT and TOKEN variables with data send by you
+
 Done!
 
 
