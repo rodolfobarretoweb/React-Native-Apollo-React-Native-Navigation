@@ -1,6 +1,8 @@
 NuContaMarketPlace
 ====
 
+Project for nubank hiring process
+
 ## HOW I BUILD
 
 ### Main Libraries
