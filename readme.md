@@ -1,4 +1,4 @@
-ReactNative-Apollo-ReactNavigation
+React-Native-Apollo-React-Native-Navigation
 ====
 
 ## HOW I BUILD
