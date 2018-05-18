@@ -1,7 +1,5 @@
-NuContaMarketPlace
+ReactNative-Apollo-ReactNavigation
 ====
-
-Project for nubank hiring process
 
 ## HOW I BUILD
 
